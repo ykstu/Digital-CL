@@ -1,0 +1,49 @@
+#header{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#app-head{
+    font-size: smaller;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    -webkit-app-region: drag;
+    height: 30px;
+    width: 100vw;
+    background-color: #222;
+}
+#app-head-sub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    -webkit-app-region: drag;
+    height: 50px;
+    width: 100vw;
+    background-color: #222;
+    div{
+        -webkit-app-region: no-drag;
+        padding: 13px;
+    }
+    div:hover{
+        background-color: #444;
+    }
+}
+
+#app-body{
+    height: calc(100vh - 82px);
+
+}
+#footer{
+    -webkit-app-region: drag;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    height: 40px;
+    background-color: #222;
+}
