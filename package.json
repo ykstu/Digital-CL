@@ -1,0 +1,20 @@
+{
+  "name": "digital-craft-launcher",
+  "version": "1.0.0",
+  "description": "11111111111",
+  "main": "main.js",
+  "type":"module",
+  "repository": "https://github.com/ykstu/Digital-CL.git",
+  "author": "ykstu <yangzh0812@outlook.com>",
+  "license": "GPL-3.0",
+  "packageManager": "yarn@4.11.0",
+  "scripts": {
+    "test": "electron .",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "electron": "^39.2.0"
+  }
+}
