@@ -1,3 +1,8 @@
+#main{
+    width: 100vw;
+    height: 100vh;
+}
+
 #header{
     width: 100vw;
     height: 100vh;
@@ -15,6 +20,9 @@
     height: 30px;
     width: 100vw;
     background-color: #222;
+    div{
+        padding: 3.5px 13px;
+    }
 }
 #app-head-sub{
     display: flex;
@@ -33,17 +41,35 @@
         background-color: #444;
     }
 }
-
-#app-body{
-    height: calc(100vh - 82px);
-
+#app-head-url{
+    
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    
+    color: white;
+    -webkit-app-region: drag;
+    height: 20px;
+    width: 100vw;
+    background-color: #222;
+    div{
+        padding: 0 13px;
+        -webkit-app-region: no-drag;
+        font-size: 10px;
+    }
 }
+
 #footer{
     -webkit-app-region: drag;
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
     align-items: center;
     color: white;
     height: 40px;
     background-color: #222;
+    div{
+        padding: 3.5px 13px;
+    }
 }

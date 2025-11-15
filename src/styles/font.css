@@ -1,0 +1,16 @@
+/*
+    font.css|@ykstu
+    引用外部字体
+*/
+@font-face {
+  font-family: 'SourceHanMono';
+  src: url('../assets/fonts/SourceHanMono.ttc') format('truetype');
+}
+@font-face {
+  font-family: 'SourceHanSansSC';
+  src: url('../assets/fonts/SourceHanSansSC-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'SourceHanSerifSC';
+  src: url('../assets/fonts/SourceHanSerifSC-Regular.otf') format('opentype');
+}

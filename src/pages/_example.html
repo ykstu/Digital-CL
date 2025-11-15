@@ -3,19 +3,272 @@
     <head>
       <meta charset="UTF-8">
       <title>Digital CL</title>
-      <style>
-        html, body {
-          height: 100%;
-          width: 100%;
-          margin: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-family: Arial, sans-serif;
-        }
-      </style>
+      <link rel="stylesheet" type="text/css" href="../styles/ui.css">
     </head>
     <body>
-      <h1>Example Page</h1>
+      <header>
+    <h1>HTML标准元素测试页面</h1>
+    <nav>
+      <ul>
+        <li><a href="#text">文本元素</a></li>
+        <li><a href="#forms">表单元素</a></li>
+        <li><a href="#media">媒体元素</a></li>
+        <li><a href="#structure">结构元素</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="text">
+      <h2>文本元素</h2>
+      
+      <p>这是一个段落元素。包含 <strong>粗体文本</strong>、<em>斜体文本</em>、<u>下划线文本</u> 和 <s>删除线文本</s>。</p>
+      
+      <h3>三级标题</h3>
+      <h4>四级标题</h4>
+      <h5>五级标题</h5>
+      <h6>六级标题</h6>
+      
+      <blockquote>
+        这是一个块引用元素，用于展示引用内容。
+      </blockquote>
+      
+      <p>有序列表：</p>
+      <ol>
+        <li>有序列表项一</li>
+        <li>有序列表项二
+          <ol>
+            <li>嵌套有序列表项1</li>
+            <li>嵌套有序列表项2</li>
+          </ol>
+        </li>
+        <li>有序列表项三</li>
+      </ol>
+      
+      <p>无序列表：</p>
+      <ul>
+        <li>无序列表项一</li>
+        <li>无序列表项二
+          <ul>
+            <li>嵌套无序列表项1</li>
+            <li>嵌套无序列表项2</li>
+          </ul>
+        </li>
+        <li>无序列表项三</li>
+      </ul>
+      
+      <p>定义列表：</p>
+      <dl>
+        <dt>HTML</dt>
+        <dd>超文本标记语言，用于创建网页结构</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表，用于设计网页样式</dd>
+        <dt>JavaScript</dt>
+        <dd>编程语言，用于实现网页交互</dd>
+      </dl>
+      
+      <p>文本格式化：
+        <br>这是换行元素的效果
+        <br><code>&lt;code&gt;标签用于显示代码&lt;/code&gt;</code>
+        <br><kbd>Ctrl+C</kbd> 表示键盘快捷键
+        <br>水的化学式是 H<sub>2</sub>O
+        <br>2<sup>10</sup> = 1024
+        <br><abbr title="HyperText Markup Language">HTML</abbr> 是网页的基础
+        <br><address>
+          联系地址：示例街道123号<br>
+          邮箱：example@test.com
+        </address>
+      </p>
+      
+      <hr>
+    </section>
+
+    <section id="forms">
+      <h2>表单元素</h2>
+      
+      <form>
+        <fieldset>
+          <legend>个人信息</legend>
+          
+          <p>
+            <label>姓名：
+              <input type="text" placeholder="请输入姓名">
+            </label>
+          </p>
+          
+          <p>
+            <label>密码：
+              <input type="password">
+            </label>
+          </p>
+          
+          <p>
+            <label>邮箱：
+              <input type="email">
+            </label>
+          </p>
+          
+          <p>
+            <label>年龄：
+              <input type="number" min="0" max="120">
+            </label>
+          </p>
+          
+          <p>
+            <label>出生日期：
+              <input type="date">
+            </label>
+          </p>
+          
+          <p>
+            <label>兴趣爱好：
+              <input type="text" list="hobbies">
+              <datalist id="hobbies">
+                <option value="阅读">
+                <option value="运动">
+                <option value="音乐">
+                <option value="旅行">
+              </datalist>
+            </label>
+          </p>
+          
+          <p>
+            <label>性别：</label>
+            <label>
+              <input type="radio" name="gender" value="male"> 男
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female"> 女
+            </label>
+          </p>
+          
+          <p>
+            <label>喜欢的颜色：</label>
+            <label>
+              <input type="checkbox" name="color" value="red"> 红色
+            </label>
+            <label>
+              <input type="checkbox" name="color" value="blue"> 蓝色
+            </label>
+            <label>
+              <input type="checkbox" name="color" value="green"> 绿色
+            </label>
+          </p>
+          
+          <p>
+            <label>所在地区：
+              <select>
+                <option value="">请选择</option>
+                <option value="north">北方地区</option>
+                <option value="south">南方地区</option>
+                <option value="east">东部地区</option>
+                <option value="west">西部地区</option>
+              </select>
+            </label>
+          </p>
+          
+          <p>
+            <label>个人简介：
+              <textarea rows="4" cols="50" placeholder="请输入个人简介"></textarea>
+            </label>
+          </p>
+          
+          <p>
+            <label>上传头像：
+              <input type="file">
+            </label>
+          </p>
+          
+          <p>
+            <label>音量：
+              <input type="range" min="0" max="100" value="50">
+            </label>
+          </p>
+          
+          <p>
+            <button type="button">普通按钮</button>
+            <button type="submit">提交按钮</button>
+            <button type="reset">重置按钮</button>
+          </p>
+        </fieldset>
+      </form>
+      
+      <hr>
+    </section>
+
+    <section id="media">
+      <h2>媒体元素</h2>
+      
+      <p>图像：</p>
+      <img src="https://picsum.photos/400/200" alt="测试图片">
+      
+      <p>视频（示例）：</p>
+      <video controls width="400" poster="https://picsum.photos/400/200">
+        <source src="#" type="video/mp4">
+        您的浏览器不支持视频标签
+      </video>
+      
+      <p>音频（示例）：</p>
+      <audio controls>
+        <source src="#" type="audio/mpeg">
+        您的浏览器不支持音频标签
+      </audio>
+      
+      <p>嵌入内容：</p>
+      <iframe src="https://example.com" width="400" height="200" title="示例嵌入页面"></iframe>
+      
+      <hr>
+    </section>
+
+    <section id="structure">
+      <h2>结构与其他元素</h2>
+      
+      <p>表格：</p>
+      <table border="1">
+        <caption>学生信息表</caption>
+        <thead>
+          <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>张三</td>
+            <td>男</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>李四</td>
+            <td>女</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">总计：2人</td>
+          </tr>
+        </tfoot>
+      </table>
+      
+      <p>对话框：</p>
+      <dialog open>
+        <p>这是一个对话框元素</p>
+        <button>关闭</button>
+      </dialog>
+      
+      <p>进度条：</p>
+      <progress value="70" max="100"></progress>
+      
+      <p>度量：</p>
+      <meter value="3" min="0" max="10">3/10</meter>
+      <meter value="0.6">60%</meter>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 HTML标准元素测试页面</p>
+  </footer>
     </body>
 </html>
