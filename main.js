@@ -1,6 +1,6 @@
 import { app, BaseWindow, WebContentsView, Menu, ipcMain } from 'electron/main'
 
-let win,mainView,headerView,footerView;
+let win, mainView, headerView, footerView;
 
 const createWindow = () => {
   win = new BaseWindow({
@@ -11,9 +11,9 @@ const createWindow = () => {
     title: 'Digital CL',
     titleBarStyle: 'hidden',
     titleBarOverlay: {
-      height: 30,
-      color: '#222',
-      symbolColor: '#fff'
+      height: 50,
+      color: '#111',
+      symbolColor: 'white'
     },
     webPreferences: {
       webSecurity: false,
@@ -23,26 +23,30 @@ const createWindow = () => {
       devTools: true
     }
   })
+  /**上侧标题栏 */
+  headerView = new WebContentsView();
+  headerView.setBounds({ x: 0, y: 0, width: 800, height: 50 });
+  headerView.webContents.loadFile('src/pages/_/mainHeader.html').then(r => { });
+  /**右侧显示栏 */
+  mainView = new WebContentsView({ webPreferences: { nodeIntegration: true, contextIsolation: false } });
+  mainView.setBounds({ x: 50, y: 50, width: 750, height: 600 });
+  mainView.webContents.loadFile('src/pages/_example.html').then(r => { });
+  /**左侧工具栏 */
+  footerView = new WebContentsView({ webPreferences: { nodeIntegration: true, contextIsolation: false } });
+  footerView.setBounds({ x: 0, y: 50, width: 50, height: 600 });
+  footerView.webContents.loadFile('src/pages/_/mainFooter.html').then(r => { });
 
-  headerView = new WebContentsView({webPreferences: {nodeIntegration: true,contextIsolation: false}});
-  headerView.setBounds({ x: 0, y: 0, width: 800, height: 100 });
-  headerView.webContents.loadFile('src/pages/_/mainHeader.html').then(r => {});
-  mainView = new WebContentsView({webPreferences: {nodeIntegration: true,contextIsolation: false}});
-  mainView.setBounds({ x: 0, y: 100, width: 800, height: 460 });
-  mainView.webContents.loadFile('src/pages/_example.html').then(r =>{} );
-  footerView = new WebContentsView({webPreferences: {nodeIntegration: true,contextIsolation: false}});
-  footerView.setBounds({ x: 0, y: 560, width: 800, height: 40 });
-  footerView.webContents.loadFile('src/pages/_/mainFooter.html').then(r => {});
   win.contentView.addChildView(headerView);
   win.contentView.addChildView(mainView);
   win.contentView.addChildView(footerView);
 
   win.on('resize', () => {
     const winBounds = win.getBounds()
-    headerView.setBounds({x: 0,y: 0,width: winBounds.width,height: 100})
-    mainView.setBounds({x: 0,y: 100,width: winBounds.width,height: winBounds.height - 140})
-    footerView.setBounds({x: 0,y: winBounds.height - 40,width: winBounds.width,height: 40})
+    headerView.setBounds({ x: 0, y: 0, width: winBounds.width, height: 50 })
+    mainView.setBounds({ x: 50, y: 50, width: winBounds.width - 50, height: winBounds.height - 50 })
+    footerView.setBounds({ x: 0, y: 50, width: 50, height: winBounds.height - 50 })
   })
+  //headerView.webContents.openDevTools({ mode: 'undocked' })
   //footerView.webContents.openDevTools({ mode: 'undocked' })
   //mainView.webContents.openDevTools({ mode: 'bottom' })
 }
@@ -59,11 +63,11 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
 
-ipcMain.handle('set-main-view', async (event, mode,url) => {
-  if (mode === 'url'){
+ipcMain.handle('set-main-view', async (event, mode, url) => {
+  if (mode === 'url') {
     await mainView.webContents.loadURL(url)
   }
-  else if (mode === 'file'){
+  else if (mode === 'file') {
     await mainView.webContents.loadFile(url)
   }
 })

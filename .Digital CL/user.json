@@ -1,0 +1,331 @@
+{
+  "name": "digital-craft-launcher",
+  "version": "1.0.0",
+  "description": "Digital CL",
+  "keywords": ["dcl"],
+  "main": "main.js",
+  "type": "module",
+  "repository": "https://github.com/ykstu/Digital-CL.git",
+  "author": "ykstu",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.ykstu.digitalcraftlauncher",
+    "productName": "Digital CL",
+    "copyright": "Copyright © 2025 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "node_modules/",
+      "src/"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "scripts": {
+    "dcl:test": "nodemon --ext js,mjs,html,htm,css,json --exec electron .",
+    "electron-forge:start": "electron-forge start",
+    "electron-forge:package": "electron-forge package",
+    "electron-forge:make": "set NODE_OPTIONS=--use-system-ca && electron-forge make",
+    "electron-builder:pack": "electron-builder --dir",
+    "electron-builder:dist": "electron-builder"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
+{
+  "name": "digital-craft-launcher",
+  "version": "1.0.0",
+  "description": "Digital CL",
+  "keywords": ["dcl"],
+  "main": "main.js",
+  "type": "module",
+  "repository": "https://github.com/ykstu/Digital-CL.git",
+  "author": "ykstu",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.ykstu.digitalcraftlauncher",
+    "productName": "Digital CL",
+    "copyright": "Copyright © 2025 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "node_modules/",
+      "src/"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "scripts": {
+    "dcl:test": "nodemon --ext js,mjs,html,htm,css,json --exec electron .",
+    "electron-forge:start": "electron-forge start",
+    "electron-forge:package": "electron-forge package",
+    "electron-forge:make": "set NODE_OPTIONS=--use-system-ca && electron-forge make",
+    "electron-builder:pack": "electron-builder --dir",
+    "electron-builder:dist": "electron-builder"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
+{
+  "name": "digital-craft-launcher",
+  "version": "1.0.0",
+  "description": "Digital CL",
+  "keywords": ["dcl"],
+  "main": "main.js",
+  "type": "module",
+  "repository": "https://github.com/ykstu/Digital-CL.git",
+  "author": "ykstu",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.ykstu.digitalcraftlauncher",
+    "productName": "Digital CL",
+    "copyright": "Copyright © 2025 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "node_modules/",
+      "src/"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "scripts": {
+    "dcl:test": "nodemon --ext js,mjs,html,htm,css,json --exec electron .",
+    "electron-forge:start": "electron-forge start",
+    "electron-forge:package": "electron-forge package",
+    "electron-forge:make": "set NODE_OPTIONS=--use-system-ca && electron-forge make",
+    "electron-builder:pack": "electron-builder --dir",
+    "electron-builder:dist": "electron-builder"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
+{
+  "name": "digital-craft-launcher",
+  "version": "1.0.0",
+  "description": "Digital CL",
+  "keywords": ["dcl"],
+  "main": "main.js",
+  "type": "module",
+  "packageManager": "yarn@4.11.0",
+  "repository": "https://github.com/ykstu/Digital-CL.git",
+  "author": "ykstu",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.ykstu.digitalcraftlauncher",
+    "productName": "Digital CL",
+    "copyright": "Copyright © 2025 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "node_modules/",
+      "src/"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "scripts": {
+    "dcl:test": "nodemon --ext js,mjs,html,htm,css,json --exec electron .",
+    "electron-forge:start": "electron-forge start",
+    "electron-forge:package": "electron-forge package",
+    "electron-forge:make": "set NODE_OPTIONS=--use-system-ca && electron-forge make",
+    "electron-builder:pack": "electron-builder --dir",
+    "electron-builder:dist": "electron-builder"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
+{
+  "name": "digital-craft-launcher",
+  "version": "1.0.0",
+  "description": "Digital CL",
+  "keywords": ["dcl"],
+  "main": "main.js",
+  "type": "module",
+  "repository": "https://github.com/ykstu/Digital-CL.git",
+  "author": "ykstu",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.ykstu.digitalcraftlauncher",
+    "productName": "Digital CL",
+    "copyright": "Copyright © 2025 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "node_modules/",
+      "src/"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "scripts": {
+    "dcl:test": "nodemon --ext js,mjs,html,htm,css,json --exec electron .",
+    "electron-forge:start": "electron-forge start",
+    "electron-forge:package": "electron-forge package",
+    "electron-forge:make": "set NODE_OPTIONS=--use-system-ca && electron-forge make",
+    "electron-builder:pack": "electron-builder --dir",
+    "electron-builder:dist": "electron-builder"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.39.1"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
